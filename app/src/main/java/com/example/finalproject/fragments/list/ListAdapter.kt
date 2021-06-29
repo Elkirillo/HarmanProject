@@ -12,10 +12,7 @@ import kotlinx.android.synthetic.main.custom_row.view.*
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     private var userList = emptyList<User>()
-    class MyViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {
-
-
-    }
+    class MyViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent, false))

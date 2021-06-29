@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/addFragment"
-        android:name="com.example.finalproject.fragments.add.addFragment"
+        android:name="com.example.finalproject.fragments.add.Fragment"
         android:label="Добавить событие"
         tools:layout="@layout/fragment_add" >
         <action

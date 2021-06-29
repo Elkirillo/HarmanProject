@@ -12,7 +12,7 @@ abstract class UserDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
 
     companion object {
-        @Volatile  //значение будет видно остальным потокам
+        @Volatile  //значение будет видно остальным потокам, singletone
         private  var INSTANCE : UserDatabase? = null
 
         fun getDatabase(context: Context) : UserDatabase {
