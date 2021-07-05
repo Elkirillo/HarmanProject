@@ -39,7 +39,6 @@ class Fragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_add, container, false)
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
@@ -57,12 +56,12 @@ class Fragment : Fragment() {
         val  myTime = editTextNumber.text.toString()
 
         if(inputCheck(place, myEvent, myTime)){
-            //создаем объект пользователя
+            //create object user
             val user = User(0, place, myEvent, myTime)
             //добавляем его в базу данных
             mUserViewModel.addUser(user)
             Toast.makeText(requireContext(), "Успешно добавлен!", Toast.LENGTH_SHORT).show()
-            //создание и отправление уведомлений
+            //create and sent notif
             createNotificationChannel()
             sendNotification(place, myEvent, myTime)
             // alarmNotif()
